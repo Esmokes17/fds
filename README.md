@@ -1,9 +1,9 @@
-# FDS
-This is a file distribute system.
+# FileD
+This is a file hashing distribution
 
-You could give them a file that gives you hashes of parts of your files in the Merkle
-tree and also you could prove the file with that hashes and index bits.
-(also in future is added network)
+You could give it a file then it gives you list of your files hashes from
+the Merkletree and also you could prove the file with that hashes and index bits.
+(also in future will be added network to it)
 
 Note: this project in development
 

@@ -2,7 +2,7 @@
 #include <vector>
 #include <fstream>
 
-#include "fds.h"
+#include "filed.h"
 
 const std::string FOLDER_NAME = ".file_hash";
 

@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-#include "fds.h"
+#include "filed.h"
 
 const std::string FOLDER_NAME = ".file_hash";
 
@@ -109,3 +109,4 @@ int main(int argc, char * argv[]) {
 
     return 0;
 }
+
