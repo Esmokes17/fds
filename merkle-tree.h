@@ -38,7 +38,6 @@ class MerkleTreeNode {
 class MerkleTree {
     private:
         merkle_node_ptr head;
-        static std::shared_ptr<std::vector<merkle_node_ptr>> find_leaves(merkle_node_ptr head);
         static DynamicBits trace(
                 IN merkle_node_ptr head,
                 OUT std::vector<std::string>& needed_hashes);
@@ -64,6 +63,7 @@ class MerkleTree {
             IN DynamicBits bits,
             std::string root_hash
         );
+        static std::shared_ptr<std::vector<merkle_node_ptr>> find_leaves(merkle_node_ptr head);
         merkle_node_ptr get_head() { return head; }
         static std::string compute_hash(merkle_node_ptr head);
         // ~MerkleTree();

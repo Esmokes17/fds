@@ -6,29 +6,10 @@
 
 const std::string FOLDER_NAME = ".file_hash";
 
-std::vector<std::string>
-get_all_files_names_within_folder(std::string foldername = FOLDER_NAME)
-{
-    std::vector<std::string> names;
-    std::string search_path = foldername + "/hash_*";
-    // std::string search_path = foldername;
-    WIN32_FIND_DATA fd;
-    HANDLE hFind = ::FindFirstFile(reinterpret_cast<LPCSTR>(search_path.c_str()), &fd); 
-    if(hFind != INVALID_HANDLE_VALUE) { 
-        do { 
-            if(! (fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) ) {
-                names.push_back(fd.cFileName);
-            }
-        } while (::FindNextFile(hFind, &fd)); 
-        ::FindClose(hFind);
-    } 
-    return names;
-}
-
 
 std::vector<std::string> get_hash_from_folder(std::string foldername = FOLDER_NAME)
 {
-    std::vector<std::string> hash_files = get_all_files_names_within_folder(foldername);
+    std::vector<std::string> hash_files = get_all_files_names_within_folder(foldername, "hash_*");
     std::vector<std::string> hashes;
     std::ifstream in;
     for (std::string name : hash_files) {
