@@ -100,7 +100,7 @@ void write_index(const std::string bits_str) {
 }
 
 void print_usage() {
-    std::cout << "Usage: main [options] <file-name>...\n" << std::endl;    
+    std::cout << "Usage: filed [options] <file-name>...\n" << std::endl;    
     std::cout << "Options:" << std::endl;
     std::cout << "  --help, -h                                  Print usage" << std::endl;
     std::cout << "  --folder-name <folder-name=./.file_hash>    Folder that you want hashes are saved in there." << std::endl;
